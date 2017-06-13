@@ -1,10 +1,12 @@
 var Park = function () {
   this.dinosaurs = [];
+  this.dinosaursOffspringMoreThanTwo = [];
 }
 
 Park.prototype = {
   empty: function () {
     this.dinosaurs = [];
+    this.dinosaursOffspringMoreThanTwo = [];
   },
 
   addDinosaur: function (dinosaur) {
@@ -18,7 +20,18 @@ Park.prototype = {
         this.dinosaurs.splice(index, 1);
       }
     }
+  },
+
+  calcDinosaur: function (offspring_per_year) {
+
+    for (var dinosaur of this.dinosaurs) {
+      if (dinosaur.offspring_per_year > offspring_per_year) {
+        this.dinosaursOffspringMoreThanTwo.push(dinosaur.type);
+      }
+    }
   }
+
+
 };
 
 module.exports = Park;
