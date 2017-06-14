@@ -35,7 +35,7 @@ describe('Park', function () {
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
-    park.calcDinosaur(2);
+    park.findDinosaurOffspringGreaterThanTwo(2);
     assert.strictEqual(2, park.dinosaursOffspringMoreThanTwo.length);
   });
 

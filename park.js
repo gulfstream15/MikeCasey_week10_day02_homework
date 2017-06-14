@@ -22,8 +22,7 @@ Park.prototype = {
     }
   },
 
-  calcDinosaur: function (offspring_per_year) {
-
+  findDinosaurOffspringGreaterThanTwo: function (offspring_per_year) {
     for (var dinosaur of this.dinosaurs) {
       if (dinosaur.offspring_per_year > offspring_per_year) {
         this.dinosaursOffspringMoreThanTwo.push(dinosaur.type);
